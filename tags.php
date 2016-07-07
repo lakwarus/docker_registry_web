@@ -77,7 +77,7 @@
         $.getJSON( "http://docker_registry_url/tag.php?repo="+getTagName, function( data ) {
             var repositories = data.tags;
             for (i = 0; i < repositories.length; i++) {
-            text += '<tr><td>docker_registry.com/'+getTagName + ':<strong>'+repositories[i]+'</strong><a class="pull-right" href="#"> Delete </a></td></tr>';
+            text += '<tr><td>docker_registry.com/'+getTagName + ':<strong>'+repositories[i]+'</strong><a class="docker-delete pull-right" href="#"> Delete </a></td></tr>';
             }
             $('.tag-container').append(text);
         });
